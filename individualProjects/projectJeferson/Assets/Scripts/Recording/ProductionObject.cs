@@ -66,8 +66,7 @@ public class ProductionObject : MonoBehaviour
 	/// </summary>
 	void CreateAttributes()
 	{
-		productionManager.CreateAttributes(
-			PlayerData.attributesCreatedAfterProduction);
+		productionManager.CreateAttributes();
 	}
 
 	//###########################################################

@@ -21,14 +21,11 @@ public class ProductionManager : MonoBehaviour
 	/// Instantiate attribute objects.
 	/// </summary>
 	/// <param name="ammount">Ammount of objects created.</param>
-	public void CreateAttributes(int ammount)
+	public void CreateAttributes()
 	{
-		for(int i = 0; i < ammount; i++)
+		for(int i = 0; i < AttributeObject.totalTypes; i++)
 		{
-			AttributeObject.Type type = (AttributeObject.Type)
-				Random.Range(0, AttributeObject.totalTypes);
-
-			CreateAttribute(type);
+			CreateAttribute(i);
 		}
 	}
 
@@ -39,9 +36,17 @@ public class ProductionManager : MonoBehaviour
 	/// Instantiate the selected attribute object.
 	/// </summary>
 	/// <param name="attribute">Type of the object instantiated.</param>
-	void CreateAttribute(AttributeObject.Type attribute)
+	void CreateAttribute(int attribute)
 	{
-		Instantiate(objectAttribute[(int)attribute]);
+		if (objectAttribute.Length > attribute &&
+		    objectAttribute[attribute] != null)
+		{
+			Instantiate(objectAttribute[attribute]);
+		}
+		else
+		{
+			Debug.LogError("Error creating attribute object.");
+		}
 	}
 
 	/// <summary>

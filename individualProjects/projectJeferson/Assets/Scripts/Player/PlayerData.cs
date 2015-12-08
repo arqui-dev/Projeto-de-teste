@@ -6,24 +6,28 @@ using System.Collections;
 /// </summary>
 public class PlayerData
 {
-	//###########################################################
-	// Static attributes
-
-	/// <summary> 
-	/// Reduces all production objects' life by this number
-	/// </summary>
-	static public int productionSkill = 1;
-
-
-
 	/// <summary>
-	/// Ammount of attribute objects created when a production object is defeated.
+	/// Player skills.
 	/// </summary>
-	static public int attributesCreatedAfterProduction = 1;
+	static public Skills skills = new Skills();
+}
 
-	/*
+/// <summary>
+/// The player skills.
+/// </summary>
+public class Skills
+{
+	/// <summary>
+	/// Production skill, used to determine the maximum level of the productions.
+	/// </summary>
+	public int production = 1;
 
-	dinheiro
-	
-	//*/
+	/// <summary> Innovation skill. </summary>
+	public int innovation = 1;
+
+	/// <summary> Content skill. </summary>
+	public int content = 1;
+
+	/// <summary> Quality skill. </summary>
+	public int quality = 1;
 }
