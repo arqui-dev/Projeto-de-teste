@@ -34,9 +34,11 @@ Conceito
 		PRODUÇÃO: A principal interface do jogo, é nela onde o jogador grava seus vídeos, tranformando suas ideias em produto. Para isso ele derrota as ideias clicando nelas e separa o resultado delas antes que sumam. Pode escolher lançar ou arquivar o vídeo produzido.
 		EUTUBO: O site de videos onde o jogador vende seus produtos, nele o jogador pode acompanhar o desenpenho de seus videos, adicionar e fazer marketing para assim conseguir novos seguidores e views.
 		MERCADO: Onde o jogador consegue novos equipamentos que aprimoram suas habilidades.
-		EQUIPE: 
-		FINANÇAS:
-		
+		EQUIPE: Nesta interface o jogador pode contratar e gerenciar seus colaboradores. Os colaboradores somam suas habilidades a do jogador para melhorar a qualidade dos produtos da empresa.
+		FINANÇAS: Nesta interface o jogador recebe o feedback dos seus gastos passados e futuros.
+	
+#============================================================================================#
+	
 	Produzir conteúdo(Produção)
 		Jogador decide produzir um vídeo a partir dos conhecimentos e recursos que possui;
 		Ao iníciar a gravação jogador decide:
