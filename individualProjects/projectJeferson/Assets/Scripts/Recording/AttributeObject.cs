@@ -16,6 +16,6 @@ public class AttributeObject : MonoBehaviour
 	/// <summary>
 	/// Quantity of attribute types.
 	/// </summary>
-	static public int totalTypes = 3;
+	public const int totalTypes = 3;
 }
 
