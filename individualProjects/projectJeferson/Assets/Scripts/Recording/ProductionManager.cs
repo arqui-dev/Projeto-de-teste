@@ -41,7 +41,7 @@ public class ProductionManager : MonoBehaviour
 		if (objectAttribute.Length > attribute &&
 		    objectAttribute[attribute] != null)
 		{
-			Instantiate(objectAttribute[attribute]);
+			Instantiate<GameObject>(objectAttribute[attribute]);
 		}
 		else
 		{

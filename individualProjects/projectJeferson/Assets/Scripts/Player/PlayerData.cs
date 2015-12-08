@@ -24,7 +24,7 @@ public class PlayerData
 	public enum KnowledgeType {
 		Innovation, Quality, Content
 	}
-	
+
 	/// <summary>
 	/// Total skill types.
 	/// </summary>
@@ -54,6 +54,8 @@ public class PlayerData
 		}
 		return sum;
 	}
+
+
 }
 
 /// <summary>
