@@ -7,55 +7,191 @@ using System.Collections;
 /// </summary>
 public class AttributeObject : MonoBehaviour
 {
-	/// <summary>
-	/// Type of the attribute object.
-	/// </summary>
+	//###########################################################
+	// Type attributes
+
+	/// <summary> Types of the attribute object. </summary>
 	public enum Type {
-		Content, Quality, Innovation
+		Innovation, Quality, Content
+	}
+
+	/// <summary> Quantity of attribute types. </summary>
+	public const int totalTypes = 3;
+
+	//###########################################################
+	// Public attributes
+
+	/// <summary> Type of the attribute object. </summary>
+	public Type type = Type.Innovation;
+
+	/// <summary> Time before the object start to blink and vanish. </summary>
+	public float timeToVanish = 5;
+
+	/// <summary> Time while the object is blinking before it disappears. </summary>
+	public float timeToDisappear = 2;
+
+	//###########################################################
+	// Private attributes
+
+	// Vanish and blinking attributes
+	/// <summary> Time before the object starts blinking. </summary>
+	float nextTimeVanish = 0;
+	/// <summary> The object started to vanish, blinking. </summary>
+	bool blinking = false;
+	/// <summary> Direction of the lerp function to go. </summary>
+	int blinkDirection = 1;
+	/// <summary> Time used to lerp the Image color. </summary>
+	float blinkTime = 0;
+	/// <summary> Speed of the blinking effect. </summary>
+	float blinkSpeed = 10;
+
+	// image component and color for blinking
+	/// <summary> Holds the Image component. </summary>
+	Image imgAttribute;
+	/// <summary> The Image base color. </summary>
+	Color imgColor;
+	/// <summary> The blink color. </summary>
+	Color blinkColor = Color.red;
+
+	// Drag attributes
+	bool moving = false;
+
+	// Destroy tag
+	bool destroyNextFrame = false;
+
+	//###########################################################
+	// Drag methods
+
+	/// <summary>
+	/// Makes this object follow the mouse, and make it shows above other objects.
+	/// </summary>
+	public void OnStartDrag()
+	{
+		MoveToMouse();
+		moving = true;
+
+		// Brings the object to front
+		Transform parent = transform.parent;
+		transform.SetParent(null);
+		transform.SetParent(parent, false);
 	}
 
 	/// <summary>
-	/// Quantity of attribute types.
+	/// Makes the object stop following the mouse and rearrange it on the screen if necessary.
 	/// </summary>
-	public const int totalTypes = 3;
+	public void OnEndDrag()
+	{
+		moving = false;
+		RearrangeOnScreen();
+	}
 
+	/// <summary> Moves to mouse. </summary>
+	void MoveToMouse()
+	{
+		transform.position = Input.mousePosition;
+	}
 
-	public float timeToVanish = 5;
-	public float timeToDisappear = 2;
+	/// <summary>
+	/// Verify if the attribute was dropped on a folder, and if not makes it be inside the screen.
+	/// </summary>
+	void RearrangeOnScreen()
+	{
+		Vector3 objPosition = this.transform.position;
+		Vector3 parentPosition = this.transform.parent.position;
+		Vector3 area = this.transform.parent.
+			GetComponent<RectTransform>().sizeDelta / 2 - 
+				this.transform.GetComponent<RectTransform>().
+				sizeDelta / 2;
 
-	float nextTimeVanish = 0;
-	bool vanishing = false;
-	int shineDirection = 1;
+		// Verify if the object was dropped on a correct folder.
+		if (GetComponentInParent<ProductionManager>().
+			VerifyDropAttributeInFolder(this))
+		{
+			destroyNextFrame = true;
+			return;
+		}
 
-	Image imgAttribute;
-	Color imgColor;
-	Color shineColor = Color.red;
+		// Make sure the object will be inside the screen position.
+		if (objPosition.x <= parentPosition.x - area.x)
+		{
+			this.transform.position = new Vector3(
+				parentPosition.x - area.x, this.transform.position.y,
+				this.transform.position.z);
+		}
+		if (objPosition.x >= parentPosition.x + area.x)
+		{
+			this.transform.position = new Vector3(
+				parentPosition.x + area.x, this.transform.position.y,
+				this.transform.position.z);
+		}
 
+		if (objPosition.y <= parentPosition.y - area.y)
+		{
+			this.transform.position = new Vector3(
+				this.transform.position.x, parentPosition.y - area.y,
+				this.transform.position.z);
+		}
+		if (objPosition.y >= parentPosition.y + area.y)
+		{
+			this.transform.position = new Vector3(
+				this.transform.position.x, parentPosition.y + area.y,
+				this.transform.position.z);
+		}
+	}
+
+	//###########################################################
+	// Inicialization
 	void Awake()
 	{
+		// Get the Image and color component
 		imgAttribute = GetComponent<Image>();
 		imgColor = imgAttribute.color;
 
+		// Set time to vanish
 		nextTimeVanish = Time.time + timeToVanish;
 	}
 
+	//###########################################################
+	// Update and private methods
+
+	// Each frame verify the time of vanish and blinking.
 	void Update()
 	{
 		VerifyVanish();
+		VerifyMoving();
+
+		if (destroyNextFrame)
+		{
+			Disappear();
+		}
 	}
 
+	/// <summary>
+	/// If the moving tag is set to true, makes this object follow the mouse.
+	/// </summary>
+	void VerifyMoving()
+	{
+		if (moving)
+		{
+			transform.position = Input.mousePosition;
+		}
+	}
+
+	/// <summary>
+	/// Verify the blinking status, call the blink method and destroys it when it's time.
+	/// </summary>
 	void VerifyVanish()
 	{
-		if (vanishing)
+		if (blinking)
 		{
-			Shine();
+			Blink();
 		}
 
 		if (Time.time > nextTimeVanish)
 		{
-			if (vanishing == false)
+			if (blinking == false)
 			{
-				vanishing = true;
+				blinking = true;
 				nextTimeVanish = Time.time + timeToDisappear;
 			}
 			else
@@ -65,15 +201,39 @@ public class AttributeObject : MonoBehaviour
 		}
 	}
 
-	void Shine()
+	/// <summary> 
+	/// Makes the object change it's color to blink, and also diminish the alfa with time. 
+	/// </summary>
+	void Blink()
 	{
 		if (imgAttribute != null)
 		{
+			float alpha = (nextTimeVanish - Time.time) / timeToDisappear;
+
+			blinkTime += blinkSpeed * Time.deltaTime;
+			if (blinkTime > 1)
+			{
+				blinkTime = 0;
+				blinkDirection = -blinkDirection;
+			}
+
+			if (blinkDirection == 1)
+			{
+				imgAttribute.color = Color.Lerp(imgColor, blinkColor, blinkTime);
+			}
+			else
+			{
+				imgAttribute.color = Color.Lerp(blinkColor, imgColor, blinkTime);
+			}
+
 			Color color = imgAttribute.color;
-			imgAttribute.color = 
+			color.a = alpha;
+
+			imgAttribute.color = color;
 		}
 	}
 
+	/// <summary> Destroys the object. </summary>
 	void Disappear()
 	{
 		Destroy (gameObject);
