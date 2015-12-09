@@ -12,11 +12,11 @@ public class AttributeObject : MonoBehaviour
 
 	/// <summary> Types of the attribute object. </summary>
 	public enum Type {
-		Innovation, Quality, Content
+		Innovation, Quality, Content, Communication
 	}
 
 	/// <summary> Quantity of attribute types. </summary>
-	public const int totalTypes = 3;
+	public const int totalTypes = 4;
 
 	//###########################################################
 	// Public attributes

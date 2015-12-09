@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Recording\ProductionObject.cs">
     <Files>
+      <File FileName="Assets\Scripts\Recording\AttributeObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\PlayerData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Recording\ProductionManager.cs" Line="65" Column="3" />
-      <File FileName="Assets\Scripts\Recording\ProductionObject.cs" Line="139" Column="50" />
-      <File FileName="Assets\Scripts\Recording\AttributeObject.cs" Line="106" Column="1" />
-      <File FileName="Assets\Scripts\Recording\FolderObject.cs" Line="10" Column="3" />
+      <File FileName="Assets\Scripts\Recording\ProductionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recording\ProductionObject.cs" Line="131" Column="33" />
+      <File FileName="Assets\Scripts\Recording\FolderObject.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
