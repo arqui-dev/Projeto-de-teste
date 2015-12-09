@@ -27,7 +27,10 @@ Conceito
 					Para evoluir um nível o jogador deve gerar e separar 10N atributos referente a habilidade;
 					Tanto os atributos gerados em um vídeo lançando quanto em um descartado são utilizados para evoluir a habilidade.
 		Tempo: Jogador tem um ano para cumprir seu objetivo sem falir, o ano é contado em semanas (52), uma vez que o dinheiro dos vídes entra semanalmente.
-			Jogo é dividido em turnos, cada turno é uma semana.	
+			Jogo é dividido em turnos, cada turno é uma semana.
+			A cada semana o jogador decide se irá ESTUDAR um novo tópico no SEBRAE ou PRODUZIR um VIDEO.
+				Compras no MERCADO, analisar FINANÇAS e gerênciar EQUIPE pode ser feito a vontade durante a SEMANA.
+			
 	Ações do Jogador: apresentadas na barra inferior da área de trabalho do jogador e são caracterizadas como icones da iterface de usuário. Temos:
 		SEBRAE: Interface auxilio ao jogador. Nela o jogador poderá aprender novos conhecimentos para criar seus vídeos; Receber consutoria para seu negócio e acessar novamento o tutorial do jogo.
 		PRODUÇÃO: A principal interface do jogo, é nela onde o jogador grava seus vídeos, tranformando suas ideias em produto. Para isso ele derrota as ideias clicando nelas e separa o resultado delas antes que sumam. Pode escolher lançar ou arquivar o vídeo produzido.
@@ -35,25 +38,42 @@ Conceito
 		MERCADO: Onde o jogador consegue novos equipamentos que aprimoram suas habilidades.
 		EQUIPE: Nesta interface o jogador pode contratar e gerenciar seus colaboradores. Os colaboradores somam suas habilidades a do jogador para melhorar a qualidade dos produtos da empresa.
 		FINANÇAS: Nesta interface o jogador recebe o feedback dos seus gastos passados e futuros.
-	Produzir conteúdo(Produção)
+	
+	PRODUÇÃO:
 		Jogador decide produzir um vídeo a partir dos conhecimentos e recursos que possui;
-		Ao iníciar a gravação jogador decide:
-                Grava 1 por semana;
-		Durante o tempo de jogada, jogador deve "derrotar" as "idéias"(produção) que deseja falar sobre e , com a mecânica de clicker, tenta terminar(derrotar) ela antes que a mesma desapareça(coldown para vanish).
+		Ao iníciar a gravação jogador:
+            Grava 1 por semana;
+			Durante o tempo de jogada, jogador deve "derrotar" as "idéias"(produção) que deseja falar sobre e , com a mecânica de clicker, tenta terminar(derrotar) ela antes que a mesma desapareça(coldown para vanish).
 			Idéia(production) possui os seguintes atributos:
-				Tempo: 	        O quanto tempo ela dura antes de desaparecer;
+				Tempo:	O quanto tempo ela dura antes de desaparecer;
 				Nível:		Define o total de vida, o tempo de duração e o quantos atributos ela deixa ao ser derrotada.
-                                Vida: 		O quanto o jogador deve clicar nela para que ela seja concluida, 
-                                                         VIDA = NIVEL*10;
-                                Atributos:	3 tipos; Conteúdo, Qualidade, Inovação, definem a qualidade do vídeo ou a experiência ganha pelo jogador;
-                                                        DROP = SKILL + RAND(1 - NIVEL);
+				Vida: 		O quanto o jogador deve clicar nela para que ela seja concluida, 
+								VIDA = NIVEL*10;
+                Atributos:	3 tipos; Conteúdo, Qualidade, Inovação, definem a qualidade do vídeo ou a experiência ganha pelo jogador;
+								DROP = SKILL + RAND(1 - NIVEL);
 		VIDEO: Resultado de uma production;
-                                        Pode ser ENVIADO ou DESCARTADO;
-                                        VIDEO = Soma(Atributos);
-                                        N = Numeros de videos enviados;
-                                        VIDEOn = Video Atual;
-                                        HYPE = VIDEOn + ( VIDEOn - VIDEO(n-1))
-			
+					Pode ser ENVIADO ou DESCARTADO;
+                        VIDEO = Soma(Atributos);
+                        N = Numeros de videos enviados;
+                        VIDEOn = Video Atual;
+                        HYPE = VIDEOn + ( VIDEOn - VIDEO(n-1));
+							O HYPE é calculado quando um vídeo é lançado.
+							
+	LANÇAMENTO:
+		Caso um VIDEO seja enviado ao "eutubo" onde deve gerar VIEWS;
+			Para garantir mais VIEWS o jogador pode adicionar estratégias de MARKETING ao vídeo.
+			Existem as seguintes estratégias de MARKETING:
+				Auto Promoção(*1):
+				Redes Sociais(*2):
+				Website(*2):
+				Propaganda(*4):
+				SEO(*5):
+		na proxima semana de acordo com a seguinte equação:
+			VIEW = (HYPE + MARKETING) * VIDEO + FAN;
+			Views geram fãs e d$ de acordo com:
+				FAN = FAN + VIEW/2N;
+				$ = (VIEW/10N) * (soma(VIEW)/1000N);
+				
 #============================================================================================#	
 	Caracteristicas do empreendimento
 		Produção, 
