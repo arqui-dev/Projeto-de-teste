@@ -6,6 +6,10 @@ public class FolderObject : MonoBehaviour
 {
 	public AttributeObject.Type type = AttributeObject.Type.Innovation;
 
+	public Text txtEarnedXP;
+
+	int earnedXP = 0;
+
 	public bool VerifyInsideFolder(AttributeObject attribute)
 	{
 		if (attribute.type != type)
@@ -24,11 +28,17 @@ public class FolderObject : MonoBehaviour
 		    attributePosition.y >= folderPosition.y - area.y &&
 		    attributePosition.y <= folderPosition.y + area.y)
 		{
-			Debug.Log ("Dropped on the "+type);
+			earnedXP += attribute.level;
+			if (txtEarnedXP != null)
+			{
+				txtEarnedXP.text = "" + earnedXP;
+			}
+			else
+			{
+				Debug.LogError("txtEarnedXP not assigned");
+			}
 			return true;
 		}
-
-		Debug.Log ("Not inside "+type);
 
 		return false;
 	}

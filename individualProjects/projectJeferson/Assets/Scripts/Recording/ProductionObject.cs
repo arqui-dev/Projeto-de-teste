@@ -18,8 +18,14 @@ public class ProductionObject : MonoBehaviour
 	//###########################################################
 	// Public attributes
 
+	/// <summary> Object that shows the production timer to the player. </summary>
+	public Image objTimer;
+
+	/// <summary> Object that shows the production life to the player. </summary>
+	public Image objLife;
+
 	/// <summary> How hard is to destroy this object </summary>
-	public int life = 9;
+	public int totalLife = 9;
 
 	/// <summary> Time before the object start to blink and vanish. </summary>
 	public float timeToVanish = 13;
@@ -50,6 +56,9 @@ public class ProductionObject : MonoBehaviour
 	/// <summary> The shine color, while blinking. </summary>
 	Color blinkColor = Color.red;
 
+	/// <summary> When this becomes zero, the player dies. </summary>
+	int currentLife = 1;
+
 	//###########################################################
 	// Public Methods
 
@@ -58,8 +67,8 @@ public class ProductionObject : MonoBehaviour
 	/// </summary>
 	public void OnClick()
 	{
-		this.life -= 1;
-		if (this.life <= 0)
+		this.currentLife -= 1;
+		if (this.currentLife <= 0)
 		{
 			Defeated();
 		}
@@ -77,6 +86,8 @@ public class ProductionObject : MonoBehaviour
 
 		imgAttribute = GetComponent<Image>();
 		imgColor = imgAttribute.color;
+
+		currentLife = totalLife;
 		
 		nextTimeVanish = Time.time + timeToVanish;
 	}
@@ -88,6 +99,36 @@ public class ProductionObject : MonoBehaviour
 	void Update()
 	{
 		VerifyVanish();
+		UpdateUIObjects();
+	}
+
+	/// <summary> Update the timer and the life. </summary>
+	void UpdateUIObjects()
+	{
+		if (objTimer != null)
+		{
+			if (blinking == false)
+			{
+				objTimer.fillAmount = 
+					(nextTimeVanish - Time.time) / timeToVanish;
+			}
+			else
+			{
+				objTimer.enabled = false;
+			}
+		}
+
+		if (objLife != null)
+		{
+			if (currentLife < 0)
+			{
+				objLife.fillAmount = 0;
+			}
+			else
+			{
+				objLife.fillAmount = ((float)currentLife) / ((float)totalLife);
+			}
+		}
 	}
 	
 	/// <summary>
@@ -156,6 +197,7 @@ public class ProductionObject : MonoBehaviour
 	/// <summary> Destroys the object. </summary>
 	void Disappear()
 	{
+		transform.parent.GetComponent<ProductionManager>().CreateProduction();
 		Destroy (gameObject);
 	}
 
@@ -168,7 +210,7 @@ public class ProductionObject : MonoBehaviour
 	void Defeated()
 	{
 		CreateAttributes();
-		Destroy (gameObject);
+		Disappear();
 	}
 
 	/// <summary>
@@ -177,6 +219,12 @@ public class ProductionObject : MonoBehaviour
 	void CreateAttributes()
 	{
 		productionManager.CreateAttributes();
+	}
+
+	/// <summary> Makes the object disappear when the time is over. </summary>
+	void EndRecording()
+	{
+		Destroy (gameObject);
 	}
 
 	//###########################################################

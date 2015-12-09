@@ -30,6 +30,9 @@ public class AttributeObject : MonoBehaviour
 	/// <summary> Time while the object is blinking before it disappears. </summary>
 	public float timeToDisappear = 2;
 
+	[HideInInspector]
+	public int level = 1;
+
 	//###########################################################
 	// Private attributes
 
@@ -235,6 +238,12 @@ public class AttributeObject : MonoBehaviour
 
 	/// <summary> Destroys the object. </summary>
 	void Disappear()
+	{
+		Destroy (gameObject);
+	}
+
+	/// <summary> Makes the object disappear when the time is over. </summary>
+	void EndRecording()
 	{
 		Destroy (gameObject);
 	}
