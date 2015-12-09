@@ -18,11 +18,12 @@ Conceito
 			Contrata funcionários;
 		Habilidades
 			Definem a capacidade do jogador em criar seus vídeos;
-			São divididas em 3 e podem ser evoluidas de acordo com os vídeos produzidos pelo jogador;
+			São divididas em 4 e podem ser evoluidas de acordo com os vídeos produzidos pelo jogador;
 				São elas:
 					Criatividade(inovation)		+Inovação	;
 					Técnica(quality)				+Qualidade;
-					Conhecimento(content)		+Conteúdo.
+					Conhecimento(content)		+Conteúdo;
+					Discurso(comunication)		+Comunicação.
 				Cada Habilidade é evoluida separadamente a partir da produção:
 					Para evoluir um nível o jogador deve gerar e separar 10N atributos referente a habilidade;
 					Tanto os atributos gerados em um vídeo lançando quanto em um descartado são utilizados para evoluir a habilidade.
@@ -34,7 +35,7 @@ Conceito
 	Ações do Jogador: apresentadas na barra inferior da área de trabalho do jogador e são caracterizadas como icones da iterface de usuário. Temos:
 		SEBRAE: Interface auxilio ao jogador. Nela o jogador poderá aprender novos conhecimentos para criar seus vídeos; Receber consutoria para seu negócio e acessar novamento o tutorial do jogo.
 		PRODUÇÃO: A principal interface do jogo, é nela onde o jogador grava seus vídeos, tranformando suas ideias em produto. Para isso ele derrota as ideias clicando nelas e separa o resultado delas antes que sumam. Pode escolher lançar ou arquivar o vídeo produzido.
-		EUTUBO: O site de videos onde o jogador vende seus produtos, nele o jogador pode acompanhar o desenpenho de seus videos, adicionar e fazer marketing para assim conseguir novos seguidores e views.
+		LANÇAMENTO: O site de videos, "EUTUBO", onde o jogador vende seus produtos, nele o jogador pode acompanhar o desenpenho de seus videos, adicionar e fazer marketing para assim conseguir novos seguidores e views.
 		MERCADO: Onde o jogador consegue novos equipamentos que aprimoram suas habilidades.
 		EQUIPE: Nesta interface o jogador pode contratar e gerenciar seus colaboradores. Os colaboradores somam suas habilidades a do jogador para melhorar a qualidade dos produtos da empresa.
 		FINANÇAS: Nesta interface o jogador recebe o feedback dos seus gastos passados e futuros.
@@ -49,18 +50,20 @@ Conceito
 				Nível:		Define o total de vida, o tempo de duração e o quantos atributos ela deixa ao ser derrotada.
 				Vida: 		O quanto o jogador deve clicar nela para que ela seja concluida, 
 								VIDA = NIVEL*10;
-                Atributos:	3 tipos; Conteúdo, Qualidade, Inovação, definem a qualidade do vídeo ou a experiência ganha pelo jogador;
+                Atributos:	4 tipos; Conteúdo, Qualidade, Inovação e Comunicação definem a qualidade do vídeo ou a experiência ganha pelo jogador;
 								DROP = SKILL + RAND(1 - NIVEL);
+				DANO: O quanto de VIDA o jogador retira da IDEIA por CLIQUE;
+							DANO = (INOVATION + QUALITY + CONTENT) / 3;
 		VIDEO: Resultado de uma production;
 					Pode ser ENVIADO ou DESCARTADO;
                         VIDEO = Soma(Atributos);
-                        N = Numeros de videos enviados;
+                        N = Número de videos enviados;
                         VIDEOn = Video Atual;
                         HYPE = VIDEOn + ( VIDEOn - VIDEO(n-1));
 							O HYPE é calculado quando um vídeo é lançado.
 							
 	LANÇAMENTO:
-		Caso um VIDEO seja enviado ao "eutubo" onde deve gerar VIEWS;
+		Caso um VIDEO seja enviado ao "EUTUBE" onde deve gerar VIEWS;
 			Para garantir mais VIEWS o jogador pode adicionar estratégias de MARKETING ao vídeo.
 			Existem as seguintes estratégias de MARKETING:
 				Auto Promoção(*1):
@@ -73,7 +76,28 @@ Conceito
 			Views geram fãs e d$ de acordo com:
 				FAN = FAN + VIEW/2N;
 				$ = (VIEW/10N) * (soma(VIEW)/1000N);
+		
+	MERCADO:
+		Na interface  o jogador é capaz de comprar upgrades para suas HABILIDADES.
+			São 10 upgrades que podem alterar as HABILIDADE;
+			UPGRADES possuem os seguintes dados:
+				Nome:	Identificação da melhoria;
+				Bônus: Quanto ele melhora cada habilidade (0 .. 4);
+				Preço:	O valor em $ do UPGRADE.
 				
+	EQUIPE:
+		O jogador poderá contratar colaboradores para seu novo empreendimento.
+		Os colaboradores Melhoram proporcionalmente as variaveis de um vídeo lançado, afetam:
+			HYPE: Social Media, Editor, Produtor, Gerente de Marketing; 
+			VIDEO: Editor, Roterista, Produtor, Designer;
+			MARKETING: Produtor, Social Media, Marketing, Desinger.
+			
+	FINANÇAS:
+		Interface por onde o jogador recebe feedback do seu balanço financeiro ao longo dos meses;
+			Balanço dos meses anteriores;
+			Balanço atual;
+			Previsão para o próximo.
+			
 #============================================================================================#	
 	Caracteristicas do empreendimento
 		Produção, 
