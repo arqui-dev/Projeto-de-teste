@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
-     <Compile Include="Assets\Scripts\Player\Utils.cs" />
      <Compile Include="Assets\Scripts\Player\VideoData.cs" />
      <Compile Include="Assets\Scripts\Recording\AttributeObject.cs" />
      <Compile Include="Assets\Scripts\Recording\FolderObject.cs" />
