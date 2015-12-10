@@ -33,15 +33,10 @@ public class PlayerData
 	/// <summary>
 	/// Player skills, quality, innovation and content.
 	/// </summary>
-	static public Skill [] skills;
+	static public Skill [] skills = new Skill[totalSkillTypes];
 
 	static public int [] skillBonus = new int[totalSkillTypes];
-
-	static public Skill skillInnovation = new Skill("Innovation","Innovation");
-	static public Skill skillQuality = new Skill("Quality","Quality");
-	static public Skill skillContent = new Skill("Content","Content");
-	static public Skill skillCommunication = new Skill("Communication","Communication");
-
+	
 	/// <summary>
 	/// The SEBRAE are of knowledges
 	/// </summary>
@@ -50,6 +45,28 @@ public class PlayerData
 
 	static public int scoreLastVideo = 0;
 	static public int scoreVideoBefore = 0;
+	static public int marketingBonus = 1;
+	static public int marketingCost = 0;
+	static public int marketingValue = 1;
+
+	static public int money = 0;
+
+	static public bool RemoveMoney(int cost)
+	{
+		if (cost > money)
+			return false;
+
+		money -= cost;
+		return true;
+	}
+
+	static public bool HasMoney(int cost)
+	{
+		if (cost > money)
+			return false;
+
+		return true;
+	}
 
 	/// <summary>
 	/// The production level.
@@ -68,15 +85,9 @@ public class PlayerData
 
 	static public void Create()
 	{
-		skills = new Skill[totalSkillTypes];
-
-		skills[0] = skillInnovation;
-		skills[1] = skillQuality;
-		skills[2] = skillContent;
-		skills[3] = skillCommunication;
-
 		for(int i = 0; i < skillBonus.Length; i++)
 		{
+			skills[i] = new Skill();
 			skillBonus[i] = 0;
 		}
 	}
@@ -92,7 +103,18 @@ public class PlayerData
 		scoreVideoBefore = scoreLastVideo;
 		scoreLastVideo = sum;
 
+		CalculateMarketingValue(1);
+
 		return sum;
+	}
+
+	static public int CalculateMarketingValue(int bonus, int cost = 0)
+	{
+		marketingBonus = bonus;
+		marketingCost = cost;
+		marketingValue = skills[(int)SkillType.Communication].Level() * marketingBonus;
+
+		return marketingValue;
 	}
 
 	static public void EarnXP(int [] levels)
@@ -120,14 +142,6 @@ public class Skill
 
 	/// <summary> Skill total experience. </summary>
 	int xp = 0;
-
-	public Skill(string title, string description)
-	{
-		this.title = title;
-		this.description = description;
-		this.level = 1;
-		this.xp = 0;
-	}
 
 	/// <summary>
 	/// Verifies if the skill is on the next level and raise it if it does.

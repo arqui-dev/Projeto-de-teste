@@ -188,8 +188,6 @@ public class ProductionManager : MonoBehaviour
 				randomPlacesToInstantiateProductionContainer.GetChild(i);
 		}
 
-		// REMOVE THIS AND CREATE IT ON THE LOAD PLACE
-		PlayerData.Create();
 	}
 	/// <summary>
 	/// Enable the record button.

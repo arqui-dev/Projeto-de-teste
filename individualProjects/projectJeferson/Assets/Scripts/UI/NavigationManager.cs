@@ -12,6 +12,10 @@ public class NavigationManager : MonoBehaviour {
 
 	void Awake()
 	{
+		// REMOVE THIS AND CREATE IT ON THE LOAD PLACE
+		PlayerData.Create();
+
+
 		Deactivate();
 	}
 
