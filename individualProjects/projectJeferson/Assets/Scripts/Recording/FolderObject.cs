@@ -4,11 +4,11 @@ using System.Collections;
 
 public class FolderObject : MonoBehaviour
 {
-	public AttributeObject.Type type = AttributeObject.Type.Innovation;
+	public PlayerData.SkillType type = PlayerData.SkillType.Innovation;
 
-	public Text txtEarnedXP;
+	public Text txtLevel;
 
-	int earnedXP = 0;
+	int level = 0;
 
 	public bool VerifyInsideFolder(AttributeObject attribute)
 	{
@@ -28,18 +28,23 @@ public class FolderObject : MonoBehaviour
 		    attributePosition.y >= folderPosition.y - area.y &&
 		    attributePosition.y <= folderPosition.y + area.y)
 		{
-			earnedXP += attribute.level;
-			if (txtEarnedXP != null)
+			level += attribute.level;
+			if (txtLevel != null)
 			{
-				txtEarnedXP.text = "" + earnedXP;
+				txtLevel.text = "" + level;
 			}
 			else
 			{
-				Debug.LogError("txtEarnedXP not assigned");
+				Debug.LogError("txtLevel not assigned");
 			}
 			return true;
 		}
 
 		return false;
+	}
+
+	public int Level()
+	{
+		return level;
 	}
 }
