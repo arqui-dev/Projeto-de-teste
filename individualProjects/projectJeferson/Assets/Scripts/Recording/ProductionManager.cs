@@ -11,6 +11,8 @@ public class ProductionManager : MonoBehaviour
 	//###########################################################
 	// Public attributes
 
+	public NavigationManager navigationManager;
+
 	/// <summary>
 	/// Transform that contains child transforms positioned on the possible random places to instantiate the attribute objects.
 	/// </summary>
@@ -73,12 +75,13 @@ public class ProductionManager : MonoBehaviour
 	// COMMENT
 	public void Discard()
 	{
-		Debug.Log ("The video was discarded.");
+		navigationManager.Deactivate();
 	}
 
 	public void Release()
 	{
-		Debug.Log ("The video was released.");
+		navigationManager.Deactivate();
+		navigationManager.eutubo.SetActive(true);
 	}
 
 	/// <summary>
@@ -185,6 +188,7 @@ public class ProductionManager : MonoBehaviour
 				randomPlacesToInstantiateProductionContainer.GetChild(i);
 		}
 
+		// REMOVE THIS AND CREATE IT ON THE LOAD PLACE
 		PlayerData.Create();
 	}
 	/// <summary>
@@ -194,6 +198,8 @@ public class ProductionManager : MonoBehaviour
 	{
 		btnRecord.gameObject.SetActive(true);
 		statusScreen.SetActive(false);
+		recording = false;
+		finished = false;
 	}
 
 	//###########################################################
@@ -243,7 +249,7 @@ public class ProductionManager : MonoBehaviour
 		
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
 		{
-			levels[i] = folders[i].Level() * 11;
+			levels[i] = folders[i].Level();
 		}
 
 		txtVideoScore.text = "" + CalculateVideoScore(levels);

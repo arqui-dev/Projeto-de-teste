@@ -48,6 +48,9 @@ public class PlayerData
 	static public Knowledge [] knowledges = 
 		new Knowledge[totalKnowledgeTypes];
 
+	static public int scoreLastVideo = 0;
+	static public int scoreVideoBefore = 0;
+
 	/// <summary>
 	/// The production level.
 	/// </summary>
@@ -85,6 +88,9 @@ public class PlayerData
 		{
 			sum += levels[i] + skillBonus[i];
 		}
+
+		scoreVideoBefore = scoreLastVideo;
+		scoreLastVideo = sum;
 
 		return sum;
 	}
