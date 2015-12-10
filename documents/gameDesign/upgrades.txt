@@ -1,75 +1,58 @@
 Sistema de upgrades
 
-upgrade 1(Software de edição de video)
+upgrade 1 (Software de ediÃ§Ã£o de video)
 	Atributos melhorados
-		> Inovação: +1x
+		> InovaÃ§Ã£o: +1x
 		> Qualidade: +1x
-	Custo: $ 915,00
+	Custo: $ 900,00
 
-upgrade 2(André viado decidirá)
+upgrade 2 (Livros novos)
 	Atributos melhorados
 		> Conteudo: +2x
-		> Comnicação: +1x
-	Custo: $ 1 260,00
+		> ComnicaÃ§Ã£o: +1x
+	Custo: $ 1 800,00
 
-upgrade 3(André viado decidirá)
+upgrade 3 (Microfone de mesa)
 	Atributos melhorados
 		> Qualidade: +2x
-		> Comnicação: +1x
-	Custo: $ 1 705,00
+		> ComnicaÃ§Ã£o: +2x
+	Custo: $ 3 600,00
 
-upgrade 4(André viado decidirá)
+upgrade 4 (Sistema de Ã¡udio)
 	Atributos melhorados
 		> Conteudo: +1x
-		> Inovação: +2x
-		> Comnicação: +1x
-	Custo: $ 2 000,00
+		> InovaÃ§Ã£o: +2x
+		> ComunicaÃ§Ã£o: +2x
+	Custo: $ 7 200,00
 
-upgrade 5(André viado decidirá)
+upgrade 5( Roteirista )
 	Atributos melhorados
 		> Conteudo: +2x
-		> Inovação: +2x
+		> InovaÃ§Ã£o: +2x
 		> Qualidade: +1x
-	Custo: $ 2 300,00
+	Custo: $ 14 400,00	Custo Mensal: $ 1 200,00
 
-upgrade 6(André viado decidirá)
+upgrade 6(CÃ¢mera Nova)
 	Atributos melhorados
 		> Conteudo: +1x
-		> Inovação: +1x
-		> Qualidade: +2x
-		> Comnicação: +2x
-	Custo: $ 2 660,00
+		> InovaÃ§Ã£o: +2x
+		> Qualidade: +4x
+		> ComnicaÃ§Ã£o: +2x
+	Custo: $ 24 300,00
 
-upgrade 7(André viado decidirá)
+upgrade 7(Produtor)
 	Atributos melhorados
 		> Conteudo: +3x
-		> Inovação: +3x
-		> Qualidade: +3x
-		> Comnicação: +3x
-	Custo: $ 4 080,00
+		> InovaÃ§Ã£o: +3x
+		> Qualidade: +2x
+		> ComnicaÃ§Ã£o: +3x
+	Custo: $ 57 600,0	Custo Mensal: $ 4 800,00 
 
-upgrade 8(André viado decidirá)
+upgrade 8(EstÃºdio de GravaÃ§aÃµ)
 	Atributos melhorados
 		> Conteudo: +6x
-		> Inovação: +5x
+		> InovaÃ§Ã£o: +5x
 		> Qualidade: +5x
-		> Comnicação: +5x
-	Custo: $ 5 310,00
+		> ComnicaÃ§Ã£o: +5x
+	Custo: $ 115 200,00	Custo Mensal: $ 9 600,00
 
-upgrade 9(André viado decidirá)
-	Atributos melhorados
-		> Conteudo: +5x
-		> Inovação: +10x
-		> Qualidade: +6x
-		> Comnicação: +6x
-	Custo: $ 8 685,00
-
-upgrade 10(André viado decidirá)
-	Atributos melhorados
-		> Conteudo: +10x
-		> Inovação: +6x
-		> Qualidade: +10x
-		> Comnicação: +10x
-	Custo: $ 18 365,00
-
-Onde x é um valor que pode ser editado de acordo com os testes.
