@@ -1,0 +1,15 @@
+EuTubo
+Historia
+
+Resumo Introdutório
+
+Murilo é um estudante que recentemente fez um curso no SEBRAE de como empreender, a partir do que assistiu e empolgado com o assunto criou um vídeo sobre empreendedorismo para colocar EuTubo, alguns dias depois, Murilo se surpreendeu com a quantidade de visualizações que seu vídeo atingiu. Naquele momento ele percebeu uma ótima oportunidade, criar vídeo-aulas com o tema empreendedorismo, assim além de estudar sobre o tema, passaria a ensina-lo e também conseguiria uma renda extra. Murilo tem como meta atingir X inscritos no seu recém-criado canal...  Auxilie Murilo em sua jornada atrás de inscritos, desenvolvendo seu canal no EuTubo, e empreendendo cada vez mais com seus vídeos.
+
+
+História Contada a partir do jogo:
+
+>Fade in
+Tela como se um vídeo começasse a ser gravado, Murilo começa um breve relato do que está por vir que pode ser acompanhado através de legenda.
+-Olá, meu nome é Murilo, a alguns dias fiz um vídeo sobre empreendedorismo que vem tendo diversos acessos, e a partir dessa semana começarei a editar novos vídeos para o meu canal “nomedocanaldoMurilo” que abordará mais assuntos para aqueles que se interessaram no meu primeiro vídeo... 
+*idéia> nesse momento podemos fazer um breve tutorial como se ele apresentasse as ferramentas que serão utilizadas pelo jogador(exemplo, essa é a área onde gravo meus vídeos, quando o jogador clicka nela, inicia a gravação de vídeo)
+
