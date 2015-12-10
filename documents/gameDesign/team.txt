@@ -1,0 +1,29 @@
+team 1 (Roterista)
+	Atributos melhorados
+		Conteudo: +4
+		Inovação: +1
+		Qualidade: +0
+		Comunicação: +1
+	Custo: $ 200,00	Custo Mensal: $ 1000
+team 2 (Editor)
+	Atributos melhorados
+		Conteudo: +0
+		Inovação: +3
+		Qualidade: +4
+		Comunicação: +1
+	Custo: $ 300,00	Custo Mensal: $ 2100
+team 3 (Marketing)
+	Atributos melhorados
+		Conteudo: +2
+		Inovação: +2
+		Qualidade: +2
+		Comunicação: +4
+	Custo: $ 400,00	Custo Mensal: $ 3200
+
+team 4 (Produtor)
+	Atributos melhorados
+		Conteudo: +3
+		Inovação: +3
+		Qualidade: +3
+		Comnicação: +3
+	Preço: $ 500	Custo Mensal: $ 4300
