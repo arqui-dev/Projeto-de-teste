@@ -1,0 +1,75 @@
+Sistema de upgrades
+
+upgrade 1(Software de edição de video)
+	Atributos melhorados
+		> Inovação: +1x
+		> Qualidade: +1x
+	Custo: $ 915,00
+
+upgrade 2(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +2x
+		> Comnicação: +1x
+	Custo: $ 1 260,00
+
+upgrade 3(André viado decidirá)
+	Atributos melhorados
+		> Qualidade: +2x
+		> Comnicação: +1x
+	Custo: $ 1 705,00
+
+upgrade 4(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +1x
+		> Inovação: +2x
+		> Comnicação: +1x
+	Custo: $ 2 000,00
+
+upgrade 5(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +2x
+		> Inovação: +2x
+		> Qualidade: +1x
+	Custo: $ 2 300,00
+
+upgrade 6(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +1x
+		> Inovação: +1x
+		> Qualidade: +2x
+		> Comnicação: +2x
+	Custo: $ 2 660,00
+
+upgrade 7(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +3x
+		> Inovação: +3x
+		> Qualidade: +3x
+		> Comnicação: +3x
+	Custo: $ 4 080,00
+
+upgrade 8(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +6x
+		> Inovação: +5x
+		> Qualidade: +5x
+		> Comnicação: +5x
+	Custo: $ 5 310,00
+
+upgrade 9(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +5x
+		> Inovação: +10x
+		> Qualidade: +6x
+		> Comnicação: +6x
+	Custo: $ 8 685,00
+
+upgrade 10(André viado decidirá)
+	Atributos melhorados
+		> Conteudo: +10x
+		> Inovação: +6x
+		> Qualidade: +10x
+		> Comnicação: +10x
+	Custo: $ 18 365,00
+
+Onde x é um valor que pode ser editado de acordo com os testes.
