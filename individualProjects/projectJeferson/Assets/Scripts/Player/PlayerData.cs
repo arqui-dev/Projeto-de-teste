@@ -10,14 +10,14 @@ public class PlayerData
 	/// Skill types.
 	/// </summary>
 	public enum SkillType {
-		Innovation, Quality, Content
+		Innovation, Quality, Content, Communication
 	}
 
 	/// <summary>
 	/// Total skill types.
 	/// </summary>
-	public const int totalSkillTypes = 3;
-
+	public const int totalSkillTypes = 4;
+	
 	/// <summary>
 	/// Skill types.
 	/// </summary>
@@ -33,13 +33,23 @@ public class PlayerData
 	/// <summary>
 	/// Player skills, quality, innovation and content.
 	/// </summary>
-	static public Skill [] skills = new Skill[totalSkillTypes];
+	static public Skill [] skills;
+
+	static public int [] skillBonus = new int[totalSkillTypes];
+
+	static public Skill skillInnovation = new Skill("Innovation","Innovation");
+	static public Skill skillQuality = new Skill("Quality","Quality");
+	static public Skill skillContent = new Skill("Content","Content");
+	static public Skill skillCommunication = new Skill("Communication","Communication");
 
 	/// <summary>
 	/// The SEBRAE are of knowledges
 	/// </summary>
 	static public Knowledge [] knowledges = 
 		new Knowledge[totalKnowledgeTypes];
+
+	static public int scoreLastVideo = 0;
+	static public int scoreVideoBefore = 0;
 
 	/// <summary>
 	/// The production level.
@@ -56,6 +66,42 @@ public class PlayerData
 	}
 
 
+	static public void Create()
+	{
+		skills = new Skill[totalSkillTypes];
+
+		skills[0] = skillInnovation;
+		skills[1] = skillQuality;
+		skills[2] = skillContent;
+		skills[3] = skillCommunication;
+
+		for(int i = 0; i < skillBonus.Length; i++)
+		{
+			skillBonus[i] = 0;
+		}
+	}
+
+	static public int CalculateVideoScore(int [] levels)
+	{
+		int sum = 0;
+		for (int i = 0; i < levels.Length; i++)
+		{
+			sum += levels[i] + skillBonus[i];
+		}
+
+		scoreVideoBefore = scoreLastVideo;
+		scoreLastVideo = sum;
+
+		return sum;
+	}
+
+	static public void EarnXP(int [] levels)
+	{
+		for (int i = 0; i < totalSkillTypes; i++)
+		{
+			skills[i].EarnXP(levels[i]);
+		}
+	}
 }
 
 /// <summary>
@@ -73,7 +119,15 @@ public class Skill
 	int level = 1;
 
 	/// <summary> Skill total experience. </summary>
-	float xp = 0;
+	int xp = 0;
+
+	public Skill(string title, string description)
+	{
+		this.title = title;
+		this.description = description;
+		this.level = 1;
+		this.xp = 0;
+	}
 
 	/// <summary>
 	/// Verifies if the skill is on the next level and raise it if it does.
@@ -90,9 +144,9 @@ public class Skill
 	/// Necessary experience for the next level.
 	/// </summary>
 	/// <returns>Necessary experience for the next level.</returns>
-	float XPNextLevel()
+	public int XPNextLevel()
 	{
-		return level * (level + 1f) / 2f;
+		return (level * (level + 1) / 2) * 10;
 	}
 
 	//###############################################################
@@ -102,7 +156,7 @@ public class Skill
 	/// Earn experience and verify if the skill leveled up.
 	/// </summary>
 	/// <param name="xp">Experience received.</param>
-	public void EarnXP(float xp)
+	public void EarnXP(int xp)
 	{
 		this.xp += xp;
 		VerifyLevelUp();

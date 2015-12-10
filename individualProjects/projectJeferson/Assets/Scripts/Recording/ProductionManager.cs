@@ -11,6 +11,8 @@ public class ProductionManager : MonoBehaviour
 	//###########################################################
 	// Public attributes
 
+	public NavigationManager navigationManager;
+
 	/// <summary>
 	/// Transform that contains child transforms positioned on the possible random places to instantiate the attribute objects.
 	/// </summary>
@@ -43,6 +45,12 @@ public class ProductionManager : MonoBehaviour
 	/// <summary> Time the player has to finish it's recording. </summary>
 	public float totalRecordingTime = 60;
 
+	// COMMENT
+	public Text txtVideoScore;
+
+	public Text [] skillStatus;
+
+
 	//###########################################################
 	// Private attributes
 
@@ -64,6 +72,18 @@ public class ProductionManager : MonoBehaviour
 	//###########################################################
 	// Public methods
 
+	// COMMENT
+	public void Discard()
+	{
+		navigationManager.Deactivate();
+	}
+
+	public void Release()
+	{
+		navigationManager.Deactivate();
+		navigationManager.eutubo.SetActive(true);
+	}
+
 	/// <summary>
 	/// Instantiate attribute objects.
 	/// </summary>
@@ -77,7 +97,7 @@ public class ProductionManager : MonoBehaviour
 			positions.Add(i);
 		}
 
-		for(int i = 0; i < AttributeObject.totalTypes; i++)
+		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
 		{
 			int index = Random.Range(0, positions.Count);
 			int position = positions[index];
@@ -167,6 +187,9 @@ public class ProductionManager : MonoBehaviour
 			randomPlacesToInstantiateProductions[i] = 
 				randomPlacesToInstantiateProductionContainer.GetChild(i);
 		}
+
+		// REMOVE THIS AND CREATE IT ON THE LOAD PLACE
+		PlayerData.Create();
 	}
 	/// <summary>
 	/// Enable the record button.
@@ -175,6 +198,8 @@ public class ProductionManager : MonoBehaviour
 	{
 		btnRecord.gameObject.SetActive(true);
 		statusScreen.SetActive(false);
+		recording = false;
+		finished = false;
 	}
 
 	//###########################################################
@@ -219,6 +244,29 @@ public class ProductionManager : MonoBehaviour
 		finished = true;
 		BroadcastMessage("EndRecording");
 		statusScreen.SetActive(true);
+
+		int [] levels = new int[PlayerData.totalSkillTypes];
+		
+		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
+		{
+			levels[i] = folders[i].Level();
+		}
+
+		txtVideoScore.text = "" + CalculateVideoScore(levels);
+		PlayerData.EarnXP(levels);
+
+		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
+		{
+			int index = i * 3;
+			skillStatus[index].text = "" + PlayerData.skills[i].Level();
+			skillStatus[index + 1].text = "" + levels[i];
+			skillStatus[index + 2].text = "" + PlayerData.skills[i].XPNextLevel();
+		}
+	}
+
+	int CalculateVideoScore(int [] levels)
+	{
+		return PlayerData.CalculateVideoScore(levels);
 	}
 
 	//###########################################################

@@ -8,21 +8,10 @@ using System.Collections;
 public class AttributeObject : MonoBehaviour
 {
 	//###########################################################
-	// Type attributes
-
-	/// <summary> Types of the attribute object. </summary>
-	public enum Type {
-		Innovation, Quality, Content, Communication
-	}
-
-	/// <summary> Quantity of attribute types. </summary>
-	public const int totalTypes = 4;
-
-	//###########################################################
 	// Public attributes
 
 	/// <summary> Type of the attribute object. </summary>
-	public Type type = Type.Innovation;
+	public PlayerData.SkillType type = PlayerData.SkillType.Innovation;
 
 	/// <summary> Time before the object start to blink and vanish. </summary>
 	public float timeToVanish = 5;
