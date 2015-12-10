@@ -1,34 +1,34 @@
 ﻿Características do comportamento empreendedor
 
 
-Busca de oportunidades e iniciativa:
+Busca de oportunidades e iniciativa ( 1 semana )
 
 
 Fazer as coisas antes de ser solicitado e/ou forçado pelas necessidades, são características de um bom empreendedor, junto a isso, ele também deve aproveitar oportunidades distintas e fora do comum para começar novos negócios, financiamentos, e conseguir novos equipamentos, locais e assistências necessárias para expansão do negócio.
 
 
-Correr riscos calculados:
+Correr riscos calculados (1 semana)
 
 
 Um bom empreendedor não pode ser sempre impulsivo, ele deve avaliar alternativas e calcular os riscos, agindo para reduzir esses e controlar os resultados, colocando-se em situações que implicam desafios e certos riscos a serem corridos.
 
 
-Exigência de qualidade e eficiência:
+Exigência de qualidade e eficiência  (1 semana)
         
   Encontrar melhores maneiras de fazer as coisas, otimizando tempo, preço aumentando qualidade, faz parte do conjunto de caracteríscas de um bom empreendedor, esse que através de métodos próprios ou já existentes alcança resultados que satisfaçam ou excedam os padrões de excelência.
 
 
-Persistência
+Persistência (1 Semana)
         
         Um bom empreendedor não teme um obstáculo, ele age repetidamente ou muda de estratégia para enfrentá-lo,  faz sacrifícios pessoais, e emprega esforços a mais afim de completar uma tarefa.
 
 
-Comprometimento
+Comprometimento (1 semana)
         
         Chamar a responsabilidade pra si mesmo afim de solucionar problemas que possam prejudicar o trabalho, é uma atitude característica de um bom empreendedor, que colabora com seus empregados e se coloca no lugar deles quando necessário, se esforçando pra manter os clientes satisfeitos, colocando boa vontade e qualidade na frente de lucro rápido.
 
 
-Busca de informações
+Busca de informações (1 semana)
 
 
         Um bom empreendedor é curioso, dedica-se pessoalmente a obter informações dos clientes, dos fornecedores e dos concorrentes, investiga como fabricar um produto ou fornecer um serviço, consultando especialistas para obter assistência técnica ou comercial.
@@ -36,12 +36,12 @@ Busca de informações
 
 
 
-Estabelecimento de metas
+Estabelecimento de metas (1 semanas)
         
 Mesmo sendo normalmente sonhador, um bom empreendedor, estabelece metas e objetivos que o desafiam, que tem um significado real. Eles visam o que pode acontecer a longo prazo, mas estabelece objetivos de curto prazo mensuráveis.
 
 
-Planejamento e monitoramento sistemático
+Planejamento e monitoramento sistemático (2 semanas)
 
 
 Bons empreendedores constantemente revisam seus planos e planejamentos, dividem as grandes tarefas em menores. Mantém registros financeiros, consultando-os para tomar decisões, levando em conta os resultados obtidos e as mudanças circunstanciais.
@@ -49,12 +49,12 @@ Bons empreendedores constantemente revisam seus planos e planejamentos, dividem 
 
 
 
-Persuasão e rede de contatos
+Persuasão e rede de contatos (1 semanas)
         
         Um bom empreendedor é um estrategista nato, carismático e persuasivo, ele consegue aliar pessoas em busca do objetivo que visa, influenciando suas decisões, agindo para desenvolver e manter relações comerciais.
 
 
-Independência e autoconfiança
+Independência e autoconfiança (1 semana)
         
         Firme com seus ideais e objetivos, um bom empreendedor busca autonomia em relação a normas e controle de outros, mantendo seu ponto de vista mesmo diante da oposição ou de resultados inicialmente desafiadores, expressando confiança na sua própria capacidade de enfrentar um desafio.
 
@@ -62,50 +62,30 @@ Independência e autoconfiança
                         Gestão empresarial
 
 
-Reflexão estratégica:
-        -Perguntas estratégicas;
-        -Análise competitiva;
-        -Cadeia de valor;
-        -Análise Ambiental;
-        -O modelo SWOT;
-        -O modelo de negócio (CanvasBMGen);
-        -O processo de estratégia.
+Reflexão estratégica: (2 semanas)
+        
+        Nesse vídeo iremos abordar o ponto de vista estratégico que um empreendedor deve ter, pontos como cadeias de valor, análise ambiental e competitiva, o modelo SWOT e modelos de negócio.
 
 
-Marketing:
-        -Modelo dos 4Ps: produto, promoção, ponto e preço;
-        -As 8 dimensões da qualidade do produto: Desempenhos, Características, Confiabilidade, Conformidade, Durabilidade, Serviços, Estética e Qualidade Percebida.
-        -Ciclo de vida do produto;
-        -Processo produtivo;
-        -Marca;
-        -Circo de venda;
+Marketing: (2 semanas)
+        
+        Um bom marketing é essencial para um negócio, e nesse vídeo abordaremos tópicos essenciais, por exemplo, o modelo dos 4Ps, as oito dimensões da qualidade do produto, o ciclo de vida de um produto, o processo produtivo, a criação de uma "marca" e a duração de um ciclo de venda.
 
 
-Produção:
-        -Formação de custos;
-        -Planejamento;
-Recursos Humanos
--Planejamento;
--Atração de talentos;
--Retenção;
--Desenvolvimento.
+Produção:  (1 semana)
+        
+        Nesse capítulo sobre produção, aprenderemos sobre como fazer um planejamento, e a calcular a formação de custos, um conhecimento indispensável para quem almeja o sucesso, independente do ramo do negócio.
+        
+Recursos Humanos (1 semanas)
+
+        Recursos Humanos, como o nome sugere, como captar pessoas para o seu empreendimento, o planejamento que envolve contratação e demissão, a atração de novos talentos, como os reter na empresa, e os desenvolver de acordo com as necessidades.
 
 
-Inovação:
--Processo de inovação.
+Inovação: (1 semana)
+        
+        Dispensa comentários, inovar sempre é preciso, e veremos como isso funciona.
 
 
-Financimento:
-Finanças:
--Fluxo de caixa;
--Demonstração do Resultado do Exercício - DRE;
--Balanço Patrimonial;        
-                -Formação de preço de venda;
-                -Financiamento;
-                -Utilização de seguro como gestão de risco;
-                -Renegociação de dívida;
-                -Venda e compra a prazo;
-                -Meios eletrônicos de pegamento;
-        Vendas:
-                -Estratégia comercial;
-                -Conhecimento do comportamento do cliente.
+Financimento: (2 semanas)
+
+        Inicialmente a parte financeira pode parecer complexa, mas após esse vídeo será simples, ensinaremos como implementar conceitos essenciais, como fluxo de caixa, renegociações, estratégias comerciais, como estipular preço nos produtos, entre outros.
