@@ -68,9 +68,8 @@ Conceito
 			Existem as seguintes estratégias de MARKETING:
 				Auto Promoção(*1):
 				Redes Sociais(*2):
-				Website(*2):
-				Propaganda(*4):
-				SEO(*5):
+				Website(*4):
+				Propaganda(*8):
 		na proxima semana de acordo com a seguinte equação:
 			VIEW = (HYPE + MARKETING) * VIDEO + FAN;
 			Views geram fãs e d$ de acordo com:
@@ -112,3 +111,5 @@ Conceito
 			Utilizar separaveis deixado pela produção para criar novo tema de vídeo.
 		Gestão Financeira,
 			Definir com o que investir o dinheiro, pagar o custo operacional mensal.
+			
+#===========================================================================================#
