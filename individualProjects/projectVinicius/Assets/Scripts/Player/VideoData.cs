@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VideoData : MonoBehaviour {
+public class VideoData {
 
 	/// <summary>
 	/// The total number of videos.
@@ -18,10 +18,7 @@ public class VideoData : MonoBehaviour {
 	/// </summary>
 	public static int totalFans = 0;
 
-	/// <summary>
-	/// The total number of money earned.
-	/// </summary>
-	public static int totalMoney = 0;
+
 
 	/// <summary>
 	/// Roberto Injustus current hype.
@@ -31,6 +28,13 @@ public class VideoData : MonoBehaviour {
 	private int viewsVideo = 0;
 	private int fansVideo = 0;
 	private int moneyVideo = 0;
+
+	int score = 0;
+
+	public VideoData(int score)
+	{
+		this.score = score;
+	}
 
 	private int Hype () {
 		int sum = PlayerData.scoreLastVideo + (PlayerData.scoreLastVideo - PlayerData.scoreVideoBefore);
@@ -47,7 +51,7 @@ public class VideoData : MonoBehaviour {
 		int sum1 = (Hype() + marketingVideo);	
 		int sum2 = (sum1 * PlayerData.scoreLastVideo) + totalFans;
 		
-		if (sum2 >= 0 && sum2 < (2 ^ 31)) {
+		if (sum2 >= 0 && sum2 < int.MaxValue) {
 			totalViews += sum2;
 			return sum2;
 		} else {
@@ -57,11 +61,9 @@ public class VideoData : MonoBehaviour {
 	}
 
 	private int Money () {
-		int sum = (totalViews / (100 * numVideos));
-		int sum2 = (totalViews / (1000 * (numVideos * numVideos)));
-		int sum3 = sum * sum2;
-		totalMoney += sum3;
-		return sum3;
+		int sum = ((totalViews * totalViews) / (10000 * (numVideos + 1)));
+		PlayerData.totalMoney += sum;
+		return sum;
 	}
 
 	/// <summary>
@@ -74,6 +76,7 @@ public class VideoData : MonoBehaviour {
 		viewsVideo = View (marketing);
 		fansVideo = Fans ();
 		moneyVideo = Money ();
+		Debug.Log("Hype "+hype+", Views "+viewsVideo+", Fans "+fansVideo+ ", Money "+moneyVideo);
 	}
 
 	/// <summary>
@@ -98,5 +101,10 @@ public class VideoData : MonoBehaviour {
 	/// <returns>The video.</returns>
 	public int MoneyVideo () {
 		return moneyVideo;
+	}
+
+	public int Score()
+	{
+		return score;
 	}
 }

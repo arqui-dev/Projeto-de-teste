@@ -11,6 +11,8 @@ public class ProductionManager : MonoBehaviour
 	//###########################################################
 	// Public attributes
 
+	public NavigationManager navigationManager;
+
 	/// <summary>
 	/// Transform that contains child transforms positioned on the possible random places to instantiate the attribute objects.
 	/// </summary>
@@ -26,6 +28,8 @@ public class ProductionManager : MonoBehaviour
 
 	public GameObject statusScreen;
 
+	public GameObject lockScreen;
+
 	/// <summary>
 	/// Attribute objects, in the order: Content, Quality and Innovation.
 	/// </summary>
@@ -36,6 +40,8 @@ public class ProductionManager : MonoBehaviour
 
 	/// <summary> Button start recording. </summary>
 	public Button btnRecord;
+
+	public Button btnRecordSmall;
 
 	/// <summary> Timer bar to show the player the remain. </summary>
 	public Image objTimerBar;
@@ -73,12 +79,13 @@ public class ProductionManager : MonoBehaviour
 	// COMMENT
 	public void Discard()
 	{
-		Debug.Log ("The video was discarded.");
+		navigationManager.Deactivate();
 	}
 
 	public void Release()
 	{
-		Debug.Log ("The video was released.");
+		navigationManager.Deactivate();
+		navigationManager.eutubo.SetActive(true);
 	}
 
 	/// <summary>
@@ -161,6 +168,8 @@ public class ProductionManager : MonoBehaviour
 			finishRecordingTime = Time.time + totalRecordingTime;
 			recording = true;
 
+			lockScreen.SetActive(true);
+
 			CreateProduction();
 		}
 	}
@@ -185,15 +194,33 @@ public class ProductionManager : MonoBehaviour
 				randomPlacesToInstantiateProductionContainer.GetChild(i);
 		}
 
-		PlayerData.Create();
 	}
 	/// <summary>
 	/// Enable the record button.
 	/// </summary>
 	void OnEnable()
 	{
-		btnRecord.gameObject.SetActive(true);
+		if (PlayerData.recordedThisTurn)
+		{
+			btnRecord.gameObject.SetActive(false);
+			btnRecordSmall.interactable = false;
+		}
+		else
+		{
+			btnRecord.gameObject.SetActive(true);
+			btnRecordSmall.interactable = true;
+		}
+
 		statusScreen.SetActive(false);
+		recording = false;
+		finished = false;
+
+		//FolderObject.totalVideoScore = 0;
+	}
+
+	void OnDisable()
+	{
+		lockScreen.SetActive(false);
 	}
 
 	//###########################################################
@@ -243,10 +270,12 @@ public class ProductionManager : MonoBehaviour
 		
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
 		{
-			levels[i] = folders[i].Level() * 11;
+			levels[i] = folders[i].Level();
 		}
 
-		txtVideoScore.text = "" + CalculateVideoScore(levels);
+		int videoScore = CalculateVideoScore(levels);
+
+		txtVideoScore.text = "" + videoScore;
 		PlayerData.EarnXP(levels);
 
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
@@ -256,6 +285,29 @@ public class ProductionManager : MonoBehaviour
 			skillStatus[index + 1].text = "" + levels[i];
 			skillStatus[index + 2].text = "" + PlayerData.skills[i].XPNextLevel();
 		}
+
+		/*
+		//PlayerData.scoreVideoBefore = 0;
+		if (PlayerData.videoLast != null)
+		{
+			PlayerData.scoreVideoBefore = PlayerData.videoLast.Score();
+		}
+		PlayerData.videoLast = PlayerData.videoRelease;
+		//*/
+
+		/*
+		//PlayerData.scoreLastVideo = 0;
+		if (PlayerData.videoRelease != null)
+		{
+			PlayerData.scoreLastVideo = PlayerData.videoRelease.Score();
+		}
+		//*/
+
+		PlayerData.videoRelease = new VideoData(videoScore);
+
+		MarketingValue.EndCampaign();
+
+		PlayerData.recordedThisTurn = true;
 	}
 
 	int CalculateVideoScore(int [] levels)

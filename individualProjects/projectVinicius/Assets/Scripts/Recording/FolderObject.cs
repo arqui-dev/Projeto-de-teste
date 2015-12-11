@@ -10,6 +10,14 @@ public class FolderObject : MonoBehaviour
 
 	int level = 0;
 
+	//static public int totalVideoScore = 0;
+
+	void OnEnable()
+	{
+		level = 0;
+		txtLevel.text = "" + level;
+	}
+
 	public bool VerifyInsideFolder(AttributeObject attribute)
 	{
 		if (attribute.type != type)
@@ -29,6 +37,9 @@ public class FolderObject : MonoBehaviour
 		    attributePosition.y <= folderPosition.y + area.y)
 		{
 			level += attribute.level;
+
+			//totalVideoScore += attribute.level;
+
 			if (txtLevel != null)
 			{
 				txtLevel.text = "" + level;
