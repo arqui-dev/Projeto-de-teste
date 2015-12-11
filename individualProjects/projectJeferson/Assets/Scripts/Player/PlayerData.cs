@@ -64,6 +64,8 @@ public class PlayerData
 	static public int turn = 0;
 	static public bool recordedThisTurn = false;
 
+	static public MarketItem [] marketItens = new MarketItem[6];
+
 	static public bool RemoveMoney(int cost)
 	{
 		if (cost > totalMoney)
@@ -103,6 +105,11 @@ public class PlayerData
 			skills[i] = new Skill();
 			skillBonus[i] = 0;
 		}
+
+		for(int i = 0; i < marketItens.Length; i++)
+		{
+			marketItens[i] = new MarketItem();
+		} 
 	}
 
 	static public int CalculateVideoScore(int [] levels)
@@ -238,4 +245,35 @@ public class Knowledge
 		return learned;
 	}
 
+}
+
+public class MarketItem
+{
+	string title = "";
+	
+	string description = "";
+	
+	bool bought = false;
+
+	int mensalCost = 0;
+	
+	public string Title()
+	{
+		return title;
+	}
+	
+	public string Description()
+	{
+		return description;
+	}
+	
+	public bool Bought()
+	{
+		return bought;
+	}
+
+	public void Buy()
+	{
+		bought = true;
+	}
 }
