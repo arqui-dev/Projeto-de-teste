@@ -2,57 +2,49 @@ Sistema de upgrades
 
 upgrade 1 (Software de edição de video)
 	Atributos melhorados
-		> Inovação: +1x
-		> Qualidade: +1x
+		Inovação: +1
+		Qualidade: +1
+		Conteúdo: +0 
+		Comunicação: +0
 	Custo: $ 900,00
 
-upgrade 2 (Livros novos)
+upgrade 2 (Livros de empreendedorismo por Alberto Enjustus)
 	Atributos melhorados
-		> Conteudo: +2x
-		> Comnicação: +1x
+		Inovação: +0
+		Qualidade: +0
+		Conteúdo: +2
+		Comnicação: +1
 	Custo: $ 1 800,00
 
 upgrade 3 (Microfone de mesa)
 	Atributos melhorados
-		> Qualidade: +2x
-		> Comnicação: +2x
+		Inovação: +0
+		Qualidade: +2
+		Conteúdo: +0
+		Comunicação: +2
 	Custo: $ 3 600,00
 
 upgrade 4 (Sistema de áudio)
 	Atributos melhorados
-		> Conteudo: +1x
-		> Inovação: +2x
-		> Comunicação: +2x
+		Inovação: +2
+		Qualidade: +0
+		Conteúdo: +1
+		Comunicação: +2
 	Custo: $ 7 200,00
 
-upgrade 5( Roteirista )
+upgrade 5(Câmera Nova)
 	Atributos melhorados
-		> Conteudo: +2x
-		> Inovação: +2x
-		> Qualidade: +1x
-	Custo: $ 14 400,00	Custo Mensal: $ 1 200,00
-
-upgrade 6(Câmera Nova)
-	Atributos melhorados
-		> Conteudo: +1x
-		> Inovação: +2x
-		> Qualidade: +4x
-		> Comnicação: +2x
+		Inovação: +2
+		Qualidade: +4
+		Conteudo: +1
+		Comunicação: +2
 	Custo: $ 24 300,00
 
-upgrade 7(Produtor)
+upgrade 6(Estúdio de Gravação)
 	Atributos melhorados
-		> Conteudo: +3x
-		> Inovação: +3x
-		> Qualidade: +2x
-		> Comnicação: +3x
-	Custo: $ 57 600,0	Custo Mensal: $ 4 800,00 
-
-upgrade 8(Estúdio de Gravaçaõ)
-	Atributos melhorados
-		> Conteudo: +6x
-		> Inovação: +5x
-		> Qualidade: +5x
-		> Comnicação: +5x
+		Inovação: +5
+		Qualidade: +5
+		Conteudo: +6
+		Comunicação: +5
 	Custo: $ 115 200,00	Custo Mensal: $ 9 600,00
 
