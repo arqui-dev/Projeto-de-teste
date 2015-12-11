@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 27bbea1b91aff20439e807a0ee8645b2
+timeCreated: 1449847403
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Interface_Sprite_Sheet_0
+    21300002: Interface_Sprite_Sheet_1
+    21300004: Interface_Sprite_Sheet_2
+    21300006: Interface_Sprite_Sheet_3
+    21300008: Interface_Sprite_Sheet_5
+    21300010: Interface_Sprite_Sheet_6
+    21300012: Interface_Sprite_Sheet_7
+    21300014: Interface_Sprite_Sheet_8
+    21300016: Interface_Sprite_Sheet_9
+    21300018: Interface_Sprite_Sheet_10
+    21300020: Interface_Sprite_Sheet_11
+    21300022: Interface_Sprite_Sheet_12
+    21300024: Interface_Sprite_Sheet_13
+    21300026: Interface_Sprite_Sheet_16
+    21300028: Interface_Sprite_Sheet_17
+    21300030: Interface_Sprite_Sheet_18
+    21300032: Interface_Sprite_Sheet_22
+    21300034: Interface_Sprite_Sheet_23
+    21300036: Interface_Sprite_Sheet_24
+    21300038: Interface_Sprite_Sheet_25
+    21300040: Interface_Sprite_Sheet_26
+    21300042: Interface_Sprite_Sheet_33
+    21300044: Interface_Sprite_Sheet_34
+    21300046: Interface_Sprite_Sheet_35
+    21300048: Interface_Sprite_Sheet_36
+    21300050: Interface_Sprite_Sheet_37
+    21300052: Interface_Sprite_Sheet_38
+    21300054: Interface_Sprite_Sheet_40
+    21300056: Interface_Sprite_Sheet_42
+    21300058: Interface_Sprite_Sheet_43
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Interface_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 766
+        height: 523
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 722
+        width: 400
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 699
+        width: 481
+        height: 321
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 693
+        width: 486
+        height: 327
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 440
+        width: 40
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 435
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 427
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 429
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 437
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 426
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 367
+        width: 400
+        height: 300
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 344
+        width: 481
+        height: 323
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 440
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 348
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 357
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 279
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 277
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 287
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 244
+        width: 276
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 223
+        width: 191
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 0
+        width: 486
+        height: 327
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 229
+        width: 26
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 215
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 129
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 129
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 129
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 130
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 90
+        width: 399
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 70
+        width: 363
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Interface_Sprite_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 37
+        width: 25
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

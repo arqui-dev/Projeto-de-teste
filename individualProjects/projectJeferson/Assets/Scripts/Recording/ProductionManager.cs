@@ -73,6 +73,8 @@ public class ProductionManager : MonoBehaviour
 	/// <summary> Time is over. </summary>
 	bool finished = false;
 
+	int videoScore = 0;
+
 	//###########################################################
 	// Public methods
 
@@ -270,10 +272,7 @@ public class ProductionManager : MonoBehaviour
 		MarketingValue.EndCampaign();
 
 		PlayerData.recordedThisTurn = true;
-	}
 
-	void ReleaseVideo()
-	{
 		int [] levels = new int[PlayerData.totalSkillTypes];
 		
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
@@ -281,7 +280,7 @@ public class ProductionManager : MonoBehaviour
 			levels[i] = folders[i].Level();
 		}
 		
-		int videoScore = CalculateVideoScore(levels);
+		videoScore = CalculateVideoScore(levels);
 		
 		txtVideoScore.text = "" + videoScore;
 		PlayerData.EarnXP(levels);
@@ -293,6 +292,11 @@ public class ProductionManager : MonoBehaviour
 			skillStatus[index + 1].text = "" + levels[i];
 			skillStatus[index + 2].text = "" + PlayerData.skills[i].XPNextLevel();
 		}
+	}
+	
+	void ReleaseVideo()
+	{
+
 		
 		/*
 		//PlayerData.scoreVideoBefore = 0;

@@ -65,7 +65,7 @@ public class AttributeObject : MonoBehaviour
 		// Brings the object to front
 		Transform parent = transform.parent;
 		transform.SetParent(null);
-		transform.SetParent(parent, false);
+		transform.SetParent(parent, true);
 	}
 
 	/// <summary>
@@ -165,7 +165,7 @@ public class AttributeObject : MonoBehaviour
 	{
 		if (moving)
 		{
-			transform.position = Input.mousePosition;
+			MoveToMouse();
 		}
 	}
 
