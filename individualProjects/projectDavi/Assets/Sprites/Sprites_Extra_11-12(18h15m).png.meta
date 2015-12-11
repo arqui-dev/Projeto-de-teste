@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 0c041df3248885147991b182f65ff3db
+timeCreated: 1449865804
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sprites_Extra_11-12(18h15m)_0
+    21300002: Sprites_Extra_11-12(18h15m)_1
+    21300004: Sprites_Extra_11-12(18h15m)_2
+    21300006: Sprites_Extra_11-12(18h15m)_3
+    21300008: Sprites_Extra_11-12(18h15m)_4
+    21300010: Sprites_Extra_11-12(18h15m)_5
+    21300012: Sprites_Extra_11-12(18h15m)_6
+    21300014: Sprites_Extra_11-12(18h15m)_7
+    21300016: Sprites_Extra_11-12(18h15m)_8
+    21300018: Sprites_Extra_11-12(18h15m)_9
+    21300020: Sprites_Extra_11-12(18h15m)_10
+    21300022: Sprites_Extra_11-12(18h15m)_11
+    21300024: Sprites_Extra_11-12(18h15m)_12
+    21300026: Sprites_Extra_11-12(18h15m)_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sprites_Extra_11-12(18h15m)_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 372
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 365
+        width: 115
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 363
+        width: 79
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_3
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 333
+        width: 125
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_4
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 333
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 177
+        width: 140
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_8
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 146
+        width: 206
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_9
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 146
+        width: 222
+        height: 164
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 142
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 72
+        width: 132
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_12
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sprites_Extra_11-12(18h15m)_13
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 9
+        width: 236
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
