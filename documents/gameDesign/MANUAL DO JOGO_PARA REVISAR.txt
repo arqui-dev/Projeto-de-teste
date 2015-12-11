@@ -1,0 +1,32 @@
+JOGO EUTUBO
+
+MENU DO JOGO
+Assim que entrar no jogo você terá a opção de iniciar um NOVO JOGO, começando uma nova jornada com o personagem do zero. Também ha a opção CONTINUAR, no qual o jogo iniciará a partir da última partida jogada, permitindo ao jogador continuar seu desenvolvimento. Além dessas duas opções, nos deparamos com a opção de habilitar e desabilitar o SOM ou a MÚSICA do Jogo.
+
+O JOGO VAI COMEÇAR
+
+Como jogar
+O jogador deve administrar e auxiliar o personagem Murilo em seu empreendimento que busca ensinar em seu canal digital na web, levando em consideração seus investimentos, melhoria de seus equipamentos, conhecimento dos assuntos que ensinará nos vídeos e diversos aspectos que o jogador irá se deparar no decorrer do jogo e lidará com a tomada de decisão e com as consequencias que tal decisão trará ao seu personagem.
+
+
+ATRIBUTOS DO VÍDEO
+Durante o jogo, o jogador irá clickar nos balões de idéias do personagem para que saiam atributos do mesmo. Os atributos que saem dos balões de idéias devem ser adicionados o mais rápido possível no ícone que recolhe atríbutos para não sumirem.
+Existem 4 ícones distintos que podem sair do bão de ídeias, são lees:
+
+Conteúdo
+O conteudo é representado por um livro, e representa o domínio sobre o tema que o personagem fala durante seus vídeos.
+
+Inovação
+Inovação é representada por uma lâmpada, e ilustra ludicamente novidades que aparecem nos vídeos criados pelo personagem.
+
+Qualidade
+Representada por um selo de qualidade, tal atributo representa o padrão de excelencia com o qual o video foi produzido, seja ele som, imagem e conteúdos do vídeo que vão sendo melhorados pelo jogador.
+
+Comunicação
+O atributo comunicação é representado pelo megafone. Este representa o modo como o personagem repassa seu conhecimento de modo compreensivel.
+
+UPDATES
+O jogo conta também com 6 melhorias, 4 profissionais contratados e 3 tipos de marketings de perços variados, os quais podem ser contratados e comprados pelo jogador para melhorar seus atributos, visualizações nos vídeos e assim planejar um modo de atingir seu objetivo final no jogo.
+
+CRITÉRIO DE VITÓRIA/DERROTA
+O jogador consegue finalizar o jogo com sucesso caso alcance 1 000 000(um milhão) em seu canal em até 52 semanas, caso contrário ele perderá. Outro critério de derrota do jogador é caso ele venha a falir através de más decisões.
