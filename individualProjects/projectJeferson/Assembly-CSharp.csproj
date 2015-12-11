@@ -54,19 +54,14 @@
      <Compile Include="Assets\Scripts\Recording\ProductionManager.cs" />
      <Compile Include="Assets\Scripts\Recording\ProductionObject.cs" />
      <Compile Include="Assets\Scripts\UI\EUTuboScreen.cs" />
+     <Compile Include="Assets\Scripts\UI\MarketManager.cs" />
      <Compile Include="Assets\Scripts\UI\NavigationManager.cs" />
      <None Include="Assets\Resources\test.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
