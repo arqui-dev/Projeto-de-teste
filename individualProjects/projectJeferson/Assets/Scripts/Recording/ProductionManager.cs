@@ -84,6 +84,7 @@ public class ProductionManager : MonoBehaviour
 
 	public void Release()
 	{
+		ReleaseVideo ();
 		navigationManager.Deactivate();
 		navigationManager.eutubo.SetActive(true);
 	}
@@ -266,18 +267,25 @@ public class ProductionManager : MonoBehaviour
 		BroadcastMessage("EndRecording");
 		statusScreen.SetActive(true);
 
+		MarketingValue.EndCampaign();
+
+		PlayerData.recordedThisTurn = true;
+	}
+
+	void ReleaseVideo()
+	{
 		int [] levels = new int[PlayerData.totalSkillTypes];
 		
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
 		{
 			levels[i] = folders[i].Level();
 		}
-
+		
 		int videoScore = CalculateVideoScore(levels);
-
+		
 		txtVideoScore.text = "" + videoScore;
 		PlayerData.EarnXP(levels);
-
+		
 		for(int i = 0; i < PlayerData.totalSkillTypes; i++)
 		{
 			int index = i * 3;
@@ -285,7 +293,7 @@ public class ProductionManager : MonoBehaviour
 			skillStatus[index + 1].text = "" + levels[i];
 			skillStatus[index + 2].text = "" + PlayerData.skills[i].XPNextLevel();
 		}
-
+		
 		/*
 		//PlayerData.scoreVideoBefore = 0;
 		if (PlayerData.videoLast != null)
@@ -294,7 +302,7 @@ public class ProductionManager : MonoBehaviour
 		}
 		PlayerData.videoLast = PlayerData.videoRelease;
 		//*/
-
+		
 		/*
 		//PlayerData.scoreLastVideo = 0;
 		if (PlayerData.videoRelease != null)
@@ -302,12 +310,8 @@ public class ProductionManager : MonoBehaviour
 			PlayerData.scoreLastVideo = PlayerData.videoRelease.Score();
 		}
 		//*/
-
+		
 		PlayerData.videoRelease = new VideoData(videoScore);
-
-		MarketingValue.EndCampaign();
-
-		PlayerData.recordedThisTurn = true;
 	}
 
 	int CalculateVideoScore(int [] levels)
