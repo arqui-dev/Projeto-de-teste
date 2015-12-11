@@ -4,11 +4,11 @@ using System.Collections;
 public class MarketingValue
 {
 	static int [] costs = {
-		0, 10, 100, 1000
+		0, 200, 600, 1400
 	};
 
 	static int [] bonus = {
-		1,2,4,8
+		1,2,3,4
 	};
 
 	static public int marketingType = 0;
@@ -41,7 +41,16 @@ public class MarketingValue
 
 	static public void StartCampaign()
 	{
+		if (!campaignStarted)
+		{
+			PlayerData.lastMarketing = Value(marketingType);
+		}
 		campaignStarted = true;
+	}
+
+	static public void EndCampaign()
+	{
+		campaignStarted = false;
 	}
 }
 

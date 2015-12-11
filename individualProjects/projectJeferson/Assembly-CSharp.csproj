@@ -45,8 +45,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player\GameManager.cs" />
      <Compile Include="Assets\Scripts\Player\MarketingValue.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\Player\VideoData.cs" />
      <Compile Include="Assets\Scripts\Recording\AttributeObject.cs" />
      <Compile Include="Assets\Scripts\Recording\FolderObject.cs" />
      <Compile Include="Assets\Scripts\Recording\ProductionManager.cs" />

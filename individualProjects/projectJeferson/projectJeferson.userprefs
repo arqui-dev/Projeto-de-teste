@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\EUTuboScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\VideoData.cs">
     <Files>
-      <File FileName="Assets\Scripts\UI\NavigationManager.cs" Line="18" Column="1" />
-      <File FileName="Assets\Scripts\Recording\FolderObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\VideoData.cs" Line="64" Column="52" />
+      <File FileName="Assets\Scripts\UI\NavigationManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Recording\FolderObject.cs" Line="18" Column="20" />
       <File FileName="Assets\Scripts\Recording\AttributeObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Recording\ProductionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerData.cs" Line="58" Column="36" />
+      <File FileName="Assets\Scripts\Recording\ProductionManager.cs" Line="221" Column="18" />
       <File FileName="Assets\Scripts\Recording\ProductionObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\EUTuboScreen.cs" Line="70" Column="1" />
+      <File FileName="Assets\Scripts\UI\EUTuboScreen.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player\MarketingValue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\GameManager.cs" Line="19" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

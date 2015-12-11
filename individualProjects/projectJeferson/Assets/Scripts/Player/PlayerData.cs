@@ -45,24 +45,37 @@ public class PlayerData
 
 	static public int scoreLastVideo = 0;
 	static public int scoreVideoBefore = 0;
+
 	static public int marketingBonus = 1;
 	static public int marketingCost = 0;
 	static public int marketingValue = 1;
 
-	static public int money = 0;
+	static public int lastMarketing = 0;
+
+	/// <summary>
+	/// The total number of money earned.
+	/// </summary>
+	static public int totalMoney = 1500;
+
+
+	static public VideoData videoRelease = null;
+	static public VideoData videoLast = null;
+
+	static public int turn = 0;
+	static public bool recordedThisTurn = false;
 
 	static public bool RemoveMoney(int cost)
 	{
-		if (cost > money)
+		if (cost > totalMoney)
 			return false;
 
-		money -= cost;
+		totalMoney -= cost;
 		return true;
 	}
 
 	static public bool HasMoney(int cost)
 	{
-		if (cost > money)
+		if (cost > totalMoney)
 			return false;
 
 		return true;
